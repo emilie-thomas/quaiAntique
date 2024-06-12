@@ -11875,4 +11875,31 @@ main {
 
 footer p {
   color: #dac496;
+}
+
+.hero {
+  position: relative;
+}
+.hero::before {
+  content: "";
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero * {
+  position: relative;
+}
+
+.hero-content {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
