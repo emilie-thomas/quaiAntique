@@ -2,5 +2,29 @@
 @import 'custom';
 
 body{
-  background-color: antiquewhite;
+  background-color: $light;
+  font-family: $font-family-sans-serif;
+}
+html{
+  position: relative;
+  min-height: 100%;
+}
+// mettre le footer en bas de la page :
+footer.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+main{
+  margin-bottom: 253px; // = hauteur max du footer (version mobile) pour éviter que le contenu de main passe sous le footer
+}
+
+.navbar-brand{
+  font-family: $font-family-serif;
+  color: $primary;
+  font-size: 2rem;
+}
+
+footer p{
+  color: $light;
 }
