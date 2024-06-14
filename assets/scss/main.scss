@@ -1,5 +1,5 @@
 @import url("/assets/node_modules/bootstrap-icons/font/bootstrap-icons.css");
-@import 'custom';
+@import 'custom.scss';
 
 body{
   background-color: $light;
@@ -57,3 +57,8 @@ footer p{
   justify-content: center;
   align-items: center;
 }
+
+.justify-text{
+  text-align: justify;
+}
+// ATTENTION : ne fonctionne pas... problème d'application du main.css sur le home
