@@ -11880,6 +11880,7 @@ footer p {
 
 .hero {
   position: relative;
+  margin-bottom: 2rem;
 }
 .hero::before {
   content: "";
@@ -11942,7 +11943,7 @@ h3, .h3 {
   font-size: 2.5rem;
 }
 
-li {
+.menu li {
   list-style-type: none;
   margin-bottom: 0.5rem;
   font-style: italic;
@@ -11950,4 +11951,12 @@ li {
 
 li > strong {
   font-style: normal;
+}
+
+.form-label, .form-check-input {
+  color: #110042;
+}
+
+.form-control {
+  max-width: 500px;
 }/*# sourceMappingURL=main.css.map */

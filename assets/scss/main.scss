@@ -34,6 +34,7 @@ footer p{
 
 .hero{
   position: relative;
+  margin-bottom: 2rem;
   &::before{
     content:"";
     background-image: url("../images/hero.jpg");
@@ -107,11 +108,20 @@ h2{
 h3{
   font-size: 2.5rem;
 }
-li{
+.menu li{
   list-style-type: none;
   margin-bottom: 0.5rem;
   font-style: italic;
 }
 li > strong {
   font-style: normal;
+}
+
+// PAGE CONNEXION
+
+.form-label, .form-check-input{
+  color: $dark;
+}
+.form-control{
+  max-width: 500px;
 }
