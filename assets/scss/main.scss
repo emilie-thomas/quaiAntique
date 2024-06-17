@@ -4,6 +4,7 @@
 body{
   background-color: $light;
   font-family: $font-family-sans-serif;
+  color: $black;
 }
 html{
   position: relative;
@@ -16,7 +17,7 @@ footer.footer{
   width: 100%;
 }
 main{
-  margin-bottom: 253px; // = hauteur max du footer (version mobile) pour éviter que le contenu de main passe sous le footer
+  margin-bottom: 300px; // = hauteur max du footer (version mobile) pour éviter que le contenu de main passe sous le footer
 }
 
 .navbar-brand{
@@ -92,4 +93,25 @@ footer p{
     transform: translate(-50%, -50%); // => pour se décaler de 50% de sa taille vers le haut et vers la gauche, pour être bien au centre
     transition: all 0.8s;
   }
+}
+
+
+// PAGE MENU
+
+h2, h3{
+  font-family: $font-family-serif;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 2.5rem;
+}
+li{
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+li > strong {
+  font-style: normal;
 }

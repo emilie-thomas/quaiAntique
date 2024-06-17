@@ -11850,6 +11850,7 @@ textarea.form-control-lg {
 body {
   background-color: #f8e7c1;
   font-family: "Raleway", sans-serif;
+  color: #070016;
 }
 
 html {
@@ -11864,7 +11865,7 @@ footer.footer {
 }
 
 main {
-  margin-bottom: 253px;
+  margin-bottom: 300px;
 }
 
 .navbar-brand {
@@ -11927,4 +11928,26 @@ footer p {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.8s;
+}
+
+h2, .h2, h3, .h3 {
+  font-family: "Parisienne", serif;
+}
+
+h2, .h2 {
+  font-size: 3rem;
+}
+
+h3, .h3 {
+  font-size: 2.5rem;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+li > strong {
+  font-style: normal;
 }/*# sourceMappingURL=main.css.map */
