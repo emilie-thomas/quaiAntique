@@ -5,13 +5,13 @@
 </div>
 
 <div class="container text-center manage-resa">
-  <a href="#" class="d-block mb-3">
+  <a href="#" class="d-block mb-3" data-bs-toggle="modal" data-bs-target="#deleteResaModal">
     <span>18/06/2024</span> - 
     <span>20:30</span> - 
     <span>4 personnes</span> - 
     <span>Pas d'allergies</span>
   </a>
-  <a href="#" class="d-block mb-3">
+  <a href="#" class="d-block mb-3" data-bs-toggle="modal" data-bs-target="#deleteResaModal">
     <span>28/06/2024</span> | 
     <span>20:00</span> | 
     <span>2 personnes</span> | 
@@ -21,4 +21,34 @@
 
 <div class="container text-center mt-5">
   <a href="/newResa" class="btn btn-secondary fw-bold">Faire une réservation</a>
+</div>
+
+
+<!-- Modal suppression -->
+<div class="modal fade" id="deleteResaModal" tabindex="-1" aria-labelledby="deleteResaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="deleteResaModalLabel">Gérer la réservation</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="container">
+          <div class="mb-3">
+            <p>
+              <span>18/06/2024</span> - 
+              <span>20:30</span> - 
+              <span>4 personnes</span> - 
+              <span>Pas d'allergies</span>
+            </p>
+
+          </div>
+          <div class="text-center my-2">
+            <button type="button" class="btn btn-danger text-white mt-4">Annuler la réservation</button>
+            <button type="button" class="btn btn btn-primary text-white mt-4" data-bs-dismiss="modal">Retour</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
