@@ -11973,4 +11973,11 @@ li > strong {
 
 .form-label, .form-check-input {
   color: #110042;
+}
+
+.manage-resa > a {
+  color: #6B4D04;
+}
+.manage-resa > a:hover {
+  color: #070016;
 }/*# sourceMappingURL=main.css.map */

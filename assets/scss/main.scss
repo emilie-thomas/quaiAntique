@@ -146,3 +146,13 @@ li > strong {
 .form-label, .form-check-input{
   color: $dark;
 }
+
+
+// RESRERVATIONS
+
+.manage-resa > a{
+  color: $secondary;
+  &:hover{
+    color: $black;
+  }
+}
