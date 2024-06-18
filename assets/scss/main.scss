@@ -110,9 +110,7 @@ footer p{
 }
 
 .bouton-image:hover{
-    border: $light 1px solid;
     background-color: $light;
-    color: $black;
 
     i{
       color: $black;
@@ -140,6 +138,55 @@ footer p{
 li > strong {
   font-style: normal;
 }
+
+// PAGE MODIFICATION DU MENU
+
+.dishSelect{
+  position: relative;
+  &:hover{
+    .action-menu-buttons{
+      opacity: 1;
+
+      i{
+        color: $dark;
+      }
+    }
+  }
+
+  .action-menu-buttons{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 3px;
+  }
+
+  .dishItem{
+    color: $dark;
+    padding: 0.5rem;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    &:hover{
+      background-color: $lightMoins;
+      //color: $primary;
+    }
+  }
+
+  .bouton-menu{
+    padding: 0 3px;
+
+    &:hover{
+      background-color: $dark;
+  
+      i{
+        color: $light;
+      }
+    }
+  }
+}
+
+
 
 // PAGE CONNEXION
 

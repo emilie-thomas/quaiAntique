@@ -11944,9 +11944,7 @@ footer p {
 }
 
 .bouton-image:hover {
-  border: #f8e7c1 1px solid;
   background-color: #f8e7c1;
-  color: #070016;
 }
 .bouton-image:hover i {
   color: #070016;
@@ -11969,6 +11967,42 @@ footer p {
 
 li > strong {
   font-style: normal;
+}
+
+.dishSelect {
+  position: relative;
+}
+.dishSelect:hover .action-menu-buttons {
+  opacity: 1;
+}
+.dishSelect:hover .action-menu-buttons i {
+  color: #110042;
+}
+.dishSelect .action-menu-buttons {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 3px;
+}
+.dishSelect .dishItem {
+  color: #110042;
+  padding: 0.5rem;
+  border: 1px solid #B8860B;
+  border-radius: 5px;
+}
+.dishSelect .dishItem:hover {
+  background-color: #faf0d8;
+}
+.dishSelect .bouton-menu {
+  padding: 0 3px;
+}
+.dishSelect .bouton-menu:hover {
+  background-color: #110042;
+}
+.dishSelect .bouton-menu:hover i {
+  color: #f8e7c1;
 }
 
 .form-label, .form-check-input {

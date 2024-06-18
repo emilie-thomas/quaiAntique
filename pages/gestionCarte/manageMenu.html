@@ -1,0 +1,243 @@
+<div class="hero text-center text-white">
+  <div class="hero-content">
+    <h1>Editer la carte</h1>
+  </div>
+</div>
+
+<!--- Ajouter un nouveau plat -->
+
+<div class="container my-4">
+  <div class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Ajouter un plat</a>
+  </div>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body bg-light">
+      <form>
+        <div class="mb-3">
+          <label for="dishTitle" class="form-label">Nom du plat</label>
+          <input type="text" class="form-control" id="dishTitle" autofocus>
+        </div>
+        <div class="mb-3">
+          <label for="dishDescription" class="form-label">Description</label>
+          <input type="text" class="form-control" id="dishDescription">
+        </div>
+        <div class="mb-3">
+          <div class="form-check">
+            <label class="form-check-label" for="entreeRadio">Entrée</label>
+            <input class="form-check-input" type="radio" name="dishType" id="entreeRadio">
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="platRadio">Plat</label>
+            <input class="form-check-input" type="radio" name="dishType" id="platRadio">
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="dessertRadio">Dessert</label>
+            <input class="form-check-input" type="radio" name="dishType" id="dessertRadio">
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-secondary text-white">Ajouter</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--- Modifier ou supprimer un plat -->
+
+<fieldset class="container mb-5">
+  <legend class="text-secondary">Entrées</legend>
+    <div class="dishesListe">
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Terrine de Foie Gras aux Myrtilles et Pain d’Épices</strong><br>Terrine de foie gras maison accompagnée d'une compotée de myrtilles, servie avec des tranches de pain d’épices légèrement toastées.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Salade de Chèvre Chaud à la Tomme de Savoie</strong><br>Salade verte avec des croûtons, des noix et des tranches de tomme de Savoie fondues sur des toasts.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Soupe à l'Oignon Gratinée</strong><br>Une soupe traditionnelle à l'oignon, gratinée avec du fromage de Beaufort et servie avec des croûtons.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+</fieldset>
+
+<fieldset class="container mb-5">
+  <legend class="text-secondary">Plats</legend>
+    <div class="dishesListe">
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Fondue Savoyarde Traditionnelle</strong><br>Mélange de fromages savoyards (Beaufort, Comté, Emmental) fondu dans du vin blanc, servi avec des morceaux de pain et des pommes de terre.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Diot aux Crozets</strong><br>Saucisses savoyardes (diots) mijotées au vin blanc, servies avec des crozets (pâtes carrées traditionnelles) à la crème.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Filet de Truite de Lac au Beurre Blanc</strong><br>Filet de truite fraîche, cuisiné au beurre blanc, servi avec des légumes de saison et une purée de pommes de terre.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+</fieldset>
+
+<fieldset class="container mb-5">
+  <legend class="text-secondary">Desserts</legend>
+    <div class="dishesListe">
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Tarte aux Myrtilles</strong><br>Tarte traditionnelle aux myrtilles de montagne, servie avec une boule de glace vanille.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Crème Brûlée à la Chartreuse</strong><br>Crème brûlée parfumée à la liqueur de Chartreuse, avec une fine couche de sucre caramélisé.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Gâteau de Savoie</strong><br>Gâteau léger et moelleux, servi avec une compotée de fruits rouges et une crème anglaise.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+</fieldset>
+
+
+<fieldset class="container mb-5">
+  <legend class="text-secondary">Vins Rouges</legend>
+    <div class="dishesListe">
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Dupasquier, Mondeuse Vieilles Vignes</strong><br>Corsé et épicé avec des notes de fruits rouges et de poivre.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Saint-Germain, Gamay de Chautagne</strong><br>Léger et fruité, avec des arômes de cerise et de framboise.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine des Ardoisières, Persan "Argile Rouge"</strong><br>Rare avec des notes de fruits noirs et d'épices, structuré et complexe.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Grisard, Pinot Noir</strong><br>Elégant avec des arômes de fraises et de sous-bois, bien équilibré.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Trosset, Mondeuse "Confidentiel"</strong>brPuissant avec des saveurs de mûre et de réglisse, et une belle longueur en bouche.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+</fieldset>
+
+<fieldset class="container mb-5">
+  <legend class="text-secondary">Vins Blancs</legend>
+    <div class="dishesListe">
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Quenard, Chignin-Bergeron "Les Terres Blanches"</strong><br>Riche avec des arômes d'abricot et de miel, et une belle minéralité.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+      <div class="dishSelect">
+        <p class="dishItem"><strong>Domaine Dupasquier, Roussette de Savoie "Marestel"</strong><br>Floral avec des notes de pomme et de poire, et une finale légèrement miellée.</p>
+        <div class="d-flex flex-column justify-content-between action-menu-buttons">
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#editMenuModal"><i class="bi bi-pencil-square"></i></button>
+          <button type="button" class="btn text-light bouton-menu" data-bs-toggle="modal" data-bs-target="#deleteDishModal"><i class="bi bi-trash"></i></button>
+        </div>
+      </div>
+    </div>
+</fieldset>
+
+
+
+<!-- Modal édition -->
+<div class="modal fade" id="editMenuModal" tabindex="-1" aria-labelledby="editMenuModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="editMenuModalLabel">Modifier le plat</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="container">
+          <div class="mb-3">
+            <label for="photoTitle" class="form-label">Titre</label>
+            <input type="text" class="form-control" id="editDishTitle" value="Terrine de Foie Gras aux Myrtilles et Pain d’Épices" autofocus>
+          </div>
+          <div class="mb-3">
+            <label for="photoTitle" class="form-label">Description</label>
+            <input type="text" class="form-control" id="editDishDescription" value="Terrine de foie gras maison accompagnée d'une compotée de myrtilles, servie avec des tranches de pain d’épices légèrement toastées." autofocus>
+          </div>
+          <div class="text-center my-2">
+            <button type="button" class="btn btn-secondary text-white mt-4">Enregistrer</button>
+            <button type="button" class="btn btn btn-primary text-white mt-4" data-bs-dismiss="modal">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal suppression -->
+<div class="modal fade" id="deleteDishModal" tabindex="-1" aria-labelledby="deleteDishModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="deleteDishModalLabel">Confirmez : Supprimer ce plat ?</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="container">
+          <div class="mb-3">
+            <input type="text" class="form-control" value="Terrine de Foie Gras aux Myrtilles et Pain d’Épices" disabled>
+          </div>
+          <div class="text-center my-2">
+            <button type="button" class="btn btn-danger text-white mt-4">Supprimer</button>
+            <button type="button" class="btn btn btn-primary text-white mt-4" data-bs-dismiss="modal">Annuler</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
