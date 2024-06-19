@@ -4,7 +4,7 @@ const phone = document.getElementById('phone');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordRepeat = document.getElementById('passwordRepeat');
-const btnCreateAccount = document.getElementById('btnCreateAccount');
+const btnSignUp = document.getElementById('btnSignUp');
 
 
 lastName.addEventListener('keyup', validateForm);
@@ -16,7 +16,7 @@ passwordRepeat.addEventListener('keyup', validateForm);
 
 
 // Fonction permettant de valider tout le formulaire :
-btnCreateAccount.disabled = true;
+btnSignUp.disabled = true;
 function validateForm() {
   const lastNameOK = validateRequired(lastName);
   const firstNameOK = validateRequired(firstName);
@@ -26,9 +26,9 @@ function validateForm() {
   const passwordRepeatOK = validateConfirmPassword(password, passwordRepeat);
 
   if(lastNameOK && firstNameOK && phoneOK && emailOK && passwordOK && passwordRepeatOK) {
-    btnCreateAccount.disabled = false;
+    btnSignUp.disabled = false;
   } else {
-    btnCreateAccount.disabled = true;
+    btnSignUp.disabled = true;
   }
 }
 

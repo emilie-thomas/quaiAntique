@@ -8,6 +8,8 @@
   <div class="mb-3">
     <label for="email" class="form-label">Email</label>
     <input type="email" class="form-control" id="email" placeholder="exemple@mail" autofocus>
+    <div class="invalid-feedback">Le mail et le mot de passe ne correspondent pas</div>
+    <!--la class "invalid-feedback" est une classe bootstrap pour afficher un message si l'élément ne correspond pas-->
   </div>
   <div class="mb-3">
     <label for="password" class="form-label">Mot de passe</label>
@@ -18,7 +20,7 @@
     <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
   </div>
   <div class="text-center my-2">
-    <button type="submit" class="btn btn-secondary text-white mt-4">Se connecter</button>
+    <button type="button" class="btn btn-secondary text-white mt-4" id="btnSignIn">Se connecter</button>
   </div>
   <div class="text-center fw-normal">
     <a href="/signUp">Vous n'avez pas encore de compte ? Créez-en un maintenant !</a>
