@@ -1,0 +1,205 @@
+@import url("/assets/node_modules/bootstrap-icons/font/bootstrap-icons.css");
+@import 'custom.scss';
+
+body{
+  background-color: $light;
+  font-family: $font-family-sans-serif;
+  color: $black;
+}
+html{
+  position: relative;
+  min-height: 100%;
+}
+// mettre le footer en bas de la page :
+footer.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+main{
+  margin-bottom: 300px; // = hauteur max du footer (version mobile) pour éviter que le contenu de main passe sous le footer
+}
+
+.navbar-brand{
+  font-family: $font-family-serif;
+  color: $primary;
+  font-size: 2rem;
+}
+
+footer p{
+  color: $light;
+}
+
+// LE HERO
+
+.hero{
+  position: relative;
+  margin-bottom: 2rem;
+  &::before{
+    content:"";
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5); // pour foncer une image
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+  } // on cale sous le hero, un élément vide (seulement avec un background-image) qui prend la dimension du hero, avec un filtre
+
+  *{
+    // positionner les éléments par-dessus le before :
+    position: relative;
+  }
+}
+
+.hero-content{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// PAGE HOME
+
+.justify-text{
+  text-align: justify;
+}
+
+
+
+// PAGE GALERIE
+.image-card{
+  position: relative;
+  &:hover{
+    .titre-image{
+      opacity: 1;
+    }
+    img{
+      filter: brightness(0.3);
+    }
+    .action-image-buttons{
+      opacity: 1;
+    }
+  }
+
+  img{
+    transition: all 0.8s;
+  }
+  
+  .titre-image{
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); // => pour se décaler de 50% de sa taille vers le haut et vers la gauche, pour être bien au centre
+    transition: all 0.8s;
+  }
+
+  .action-image-buttons{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
+
+.bouton-image:hover{
+    background-color: $light;
+
+    i{
+      color: $black;
+    }
+}
+
+// PAGE MENU
+
+.menu{
+  h2, h3{
+    font-family: $font-family-serif;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 2.5rem;
+  }
+  li{
+    list-style-type: none;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+}
+li > strong {
+  font-style: normal;
+}
+
+// PAGE MODIFICATION DU MENU
+
+.dishSelect{
+  position: relative;
+  &:hover{
+    .action-menu-buttons{
+      opacity: 1;
+
+      i{
+        color: $dark;
+      }
+    }
+  }
+
+  .action-menu-buttons{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 3px;
+  }
+
+  .dishItem{
+    color: $dark;
+    padding: 0.5rem;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    &:hover{
+      background-color: $lightMoins;
+      //color: $primary;
+    }
+  }
+
+  .bouton-menu{
+    padding: 0 3px;
+
+    &:hover{
+      background-color: $dark;
+  
+      i{
+        color: $light;
+      }
+    }
+  }
+}
+
+
+
+// PAGE CONNEXION
+
+.form-label, .form-check-input{
+  color: $dark;
+}
+
+
+// RESRERVATIONS
+
+.manage-resa > a{
+  color: $secondary;
+  &:hover{
+    color: $black;
+  }
+}
