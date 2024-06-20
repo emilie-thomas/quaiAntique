@@ -1,0 +1,47 @@
+<div class="hero text-center text-white">
+  <div class="hero-content">
+    <h1>Mon compte</h1>
+  </div>
+</div>
+
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nom</label>
+      <input type="text" class="form-control" id="name" placeholder="Nom" value="Kiba" autofocus>
+    </div>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Prénom</label>
+      <input type="text" class="form-control" id="firstName" placeholder="Prénom" value="Inuzuka">
+    </div>
+    <div class="mb-3">
+      <label for="allergies" class="form-label" value="">Allergies</label>
+      <input type="text" class="form-control" id="allergies" placeholder="Précisez ici vos allergies alimentaires">
+    </div>
+
+    <fieldset class="mb-3">
+      <label for="selectConvives" class="form-label">Nombre de convives habituel</label>
+      <select id="selectConvives" class="form-select" value="4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </fieldset>
+
+    <div class="text-center my-2">
+      <button type="submit" class="btn btn-secondary text-white mt-4">Modifier vos informations</button>
+    </div>
+    <div class="text-center my-2">
+      <button type="button" class="btn btn-danger text-white mt-4">Supprimer mon compte</button>
+    </div>
+  </form>
+
+  <div class="text-center">
+    <a href="/editPassword" class="btn btn-primary text-white mt-4">Modifier votre mot de passe</a>
+  </div>
+</div>

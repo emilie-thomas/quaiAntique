@@ -1,0 +1,69 @@
+<div class="hero text-center text-white">
+  <div class="hero-content">
+    <h1>Nouvelle réservation</h1>
+  </div>
+</div>
+
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="name" class="form-label">Nom</label>
+      <input disabled type="text" class="form-control" id="name" placeholder="Nom" value="Kiba" autofocus>
+    </div>
+    <div class="mb-3">
+      <label for="firstName" class="form-label">Prénom</label>
+      <input disabled type="text" class="form-control" id="firstName" placeholder="Prénom" value="Inuzuka">
+    </div>
+    <div class="mb-3">
+      <label for="dateResa" class="form-label">Date</label>
+      <input type="date" class="form-control" id="dateResa">
+    </div>
+
+    <div class="mb-3">
+      <div class="form-check">
+        <label class="form-check-label" for="midiRadio">Déjeuner</label>
+        <input class="form-check-input" type="radio" name="serviceChoiceRadio" id="midiRadio">
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="soirRadio">Diner</label>
+        <input class="form-check-input" type="radio" name="serviceChoiceRadio" id="soirRadio" checked>
+      </div>
+    </div>
+    
+    <div class="mb-3">
+      <label for="selectHour" class="form-label">Heure</label>
+      <select id="selectHour" class="form-select">
+        <option value="19:00">19:00</option>
+        <option value="19:30">19:30</option>
+        <option value="20:00">20:00</option>
+        <option value="20:30">20:30</option>
+        <option value="21:00">21:00</option>
+        <option value="21:30">21:30</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="selectConvives" class="form-label">Nombre de convives</label>
+      <select id="selectConvives" class="form-select" value="4">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="allergies" class="form-label" value="">Allergies</label>
+      <input type="text" class="form-control" id="allergies" placeholder="Précisez ici vos allergies alimentaires">
+    </div>
+
+    <div class="text-center my-2">
+      <button type="button" class="btn btn-secondary text-white mt-4">Valider ma réservation</button>
+      <button type="button" class="btn btn-primary text-white mt-4">Annuler</button>
+    </div>
+  </form>
+</div>
