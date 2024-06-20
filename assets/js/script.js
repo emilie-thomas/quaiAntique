@@ -59,3 +59,15 @@ if(isConnected()) {
 } else {
   alert('Vous n\'êtes pas connecté');
 }
+
+
+// Pour déconnecter un utilisateur, il suffit de supprimer le cookie et d'actualiser :
+// Pour effacer le cookie (et se déconnecter) :
+
+const signOutBtn = document.getElementById('btn-signOut');
+signOutBtn.addEventListener('click', signOut);
+
+function signOut() {
+  eraseCookie(tokenCookieName);
+  window.location.reload();
+}

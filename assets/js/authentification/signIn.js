@@ -1,3 +1,8 @@
+/* GESTION DE LA CONNEXION :
+La connexion = 
+  1- Vérifier les données utilisateurs (identifiant, mdp)
+  2- Stocker un token en cookie pour valider que l'utilisateur est connecté
+*/
 
 // On va stocker la connexion sous forme de cookie => on va stocker un token (jeton d'identification) 
 
@@ -27,8 +32,15 @@ function checkCredentials() {
 // => La méthode checkCredentials() permet de vérifier si on a le bon mail et le bon password. Si la vérification réussit, alors on ajoute un token en cookie (token factice tant que l'on a pas de BDD)
 
 
-/* 
-La connexion = 
-  1- Vérifier les données utilisateurs (identifiant, mdp)
-  2- Stocker un token en cookie pour valider que l'utilisateur est connecté
+/* GESTION DU ROLE :
 */
+
+const roleCookieName = "role";
+
+function getRole(){
+  return getCookie(roleCookieName);
+}
+
+setCookie(roleCookieName, "admin", 7);
+
+
