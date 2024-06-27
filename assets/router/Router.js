@@ -3,7 +3,7 @@ import Route from "./Route.js";
 import { allRoutes, websiteName } from "./allRoutes.js";
 
 // Création d'une route pour la page 404 (page introuvable)
-const route404 = new Route("404", "Page introuvable", "../pages/404.html");
+const route404 = new Route("404", "Page introuvable", "../pages/404.html", []);
 
 // Fonction pour récupérer la route correspondant à une URL donnée
 const getRouteByUrl = (url) => {
@@ -27,6 +27,24 @@ const LoadContentPage = async () => {
   const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
+
+  // Vérifier les droits d'accès à la page (ajouté plus tard)
+  const allRolesArray = actualRoute.authorize;
+
+  if(allRolesArray.length > 0) {
+    if(allRolesArray.includes("disconnected")) {
+      if(isConnected()) {
+        window.location.replace('/');
+      }
+    } else {
+      const userRole = getRole();
+      if(!allRolesArray.includes(userRole)) {
+        window.location.replace('/');
+      }
+    }
+  }
+
+
   // Récupération du contenu HTML de la route
   const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
   // Ajout du contenu HTML à l'élément avec l'ID "main-page"
@@ -47,6 +65,10 @@ const LoadContentPage = async () => {
   document.title = actualRoute.title + " - " + websiteName;
 };
 
+// Afficher / masquer les éléments en fonction du rôle :
+showAndHideElementsPerRoles();
+
+
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
   event = event || window.event;
@@ -63,3 +85,8 @@ window.onpopstate = LoadContentPage;
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
+
+
+
+// Avant le chargement d'une page en fonction de l'url, vérifier si l'utilisateur a bien le droit d'accéder à cette route :
+// pour ça, on vérifie si le rôle de l'utilisateur est présent dans le tableau 'authorizr' de notre route.

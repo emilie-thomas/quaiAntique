@@ -1,4 +1,5 @@
 
+// COOKIES DE CONNEXION
 
 // les fonctions utilisées ici pour gérer les cookies sont des méthodes pré-faites
 
@@ -31,6 +32,9 @@ function eraseCookie(name) {
 }
 
 
+
+// GESTION DE LA CONNEXION
+
 // Méthode pour stocker le token en cookie (et c'est la présence de ce token qui définit si on est connecté ou non)
 
 const tokenCookieName = "accesstoken";
@@ -54,20 +58,67 @@ function isConnected(){
   }
 }
 
-if(isConnected()) {
-  alert('Vous êtes connectés');
-} else {
-  alert('Vous n\'êtes pas connecté');
-}
-
 
 // Pour déconnecter un utilisateur, il suffit de supprimer le cookie et d'actualiser :
 // Pour effacer le cookie (et se déconnecter) :
 
 const signOutBtn = document.getElementById('btn-signOut');
+const roleCookieName = "role";
 signOutBtn.addEventListener('click', signOut);
 
 function signOut() {
   eraseCookie(tokenCookieName);
+  eraseCookie(roleCookieName);
   window.location.reload();
+}
+
+
+
+
+// GESTION DU ROLE :
+
+// Fonction pour récupérer le rôle de l'utilisateur :
+function getRole() {
+  return getCookie(roleCookieName);
+}
+// Et dans le fichier signIn.js, on ajoutera le rôle en cookie (setCookie(roleCookieName, "admin", 7);)
+
+/* Définir les rôles :
+  - disconnected
+  - connected
+      - admin
+      - client
+*/
+
+
+function showAndHideElementsPerRoles(){
+  const userConnected = isConnected();
+  const role = getRole();
+
+  let allElementsToShowOrHide = document.querySelectorAll('[data-show]');
+
+  allElementsToShowOrHide.forEach(element => {
+    switch(element.dataset.show){
+      case 'disconnected':
+        if(userConnected){
+          element.classList.add('d-none');
+        }
+        break;
+      case 'connected':
+        if(!userConnected){
+          element.classList.add('d-none');
+        }
+        break;
+      case 'admin':
+        if(!userConnected || role != "admin"){
+          element.classList.add('d-none');
+        }
+        break;
+      case 'client':
+        if(!userConnected || role != "client"){
+          element.classList.add('d-none');
+        }
+        break;
+    }
+  })
 }

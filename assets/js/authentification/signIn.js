@@ -10,6 +10,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const btnSignIn = document.getElementById('btnSignIn');
 
+
 btnSignIn.addEventListener('click', checkCredentials); 
 // credentials = infos de connexion
 
@@ -22,6 +23,8 @@ function checkCredentials() {
     setToken(token);
     // placer ce token en cookie
 
+    // on ajoute un cookie pour stocker le rôle de l'utilisateur :
+    setCookie(roleCookieName, "client", 7);
     window.location.replace("/");
   } else {
     email.classList.add('is-invalid');
@@ -32,15 +35,6 @@ function checkCredentials() {
 // => La méthode checkCredentials() permet de vérifier si on a le bon mail et le bon password. Si la vérification réussit, alors on ajoute un token en cookie (token factice tant que l'on a pas de BDD)
 
 
-/* GESTION DU ROLE :
-*/
 
-const roleCookieName = "role";
-
-function getRole(){
-  return getCookie(roleCookieName);
-}
-
-setCookie(roleCookieName, "admin", 7);
 
 
