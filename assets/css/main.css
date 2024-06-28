@@ -11873,6 +11873,33 @@ main {
   color: #B8860B;
   font-size: 2rem;
 }
+.navbar-brand:hover {
+  color: #f8e7c1;
+}
+
+.nav-link {
+  color: #f8e7c1;
+}
+.nav-link:hover {
+  color: white;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  background-color: #070016;
+  border: none;
+  color: #f8e7c1;
+}
+
+.dropdown-menu a:hover {
+  background-color: #B8860B;
+  color: #070016;
+}
+
+header nav .active {
+  background-color: #362164;
+  border-radius: 5%;
+}
 
 footer p {
   color: #f8e7c1;

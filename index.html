@@ -21,38 +21,36 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-black" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
-          Le Quai Antique</a>
+        <a class="navbar-brand" href="/">Le Quai Antique</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Accueil</a>
+              <a class="nav-link active" href="/menu">La carte</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/galerie">Galerie</a>
+            </li>
+
             <li class="nav-item dropdown">
-              <a class="nav-link active dropdown-toggle" href="/menu" role="button" data-bs-toggle="dropdown" aria-expanded="false">La carte</a>
+              <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Réservation
+              </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">La carte</a></li>
-                <li><a class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">La carte des vins</a></li>
+                <li><a class="dropdown-item" href="/newResa">Nouvelle réservation</a></li>
+                <li><a class="dropdown-item" href="/manageResa">Gérer mes réservations</a></li>
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/galerie">Galerie</a>
+              <a class="nav-link" href="/myAccount" data-show="connected">Mon compte</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/manageResa">Réservation</a>
+              <a class="nav-link" data-show="disconnected" href="/signIn">Connexion</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/myAccount" data-show="connected">Mon compte</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" data-show="disconnected" href="/signIn">Connexion</a>
-            </li>
-            <li class="nav-item">
-              <button class="nav-link active" id="btn-signOut" data-show="connected"><i class="bi bi-power"></i></button>
+              <button class="nav-link" id="btn-signOut" data-show="connected"><i class="bi bi-power"></i></button>
             </li>
           </ul>
         </div>

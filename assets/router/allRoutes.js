@@ -10,8 +10,8 @@ export const allRoutes = [
     new Route('/signUp', "Créer un compte", "../pages/authentification/signUp.html", ["disconnected"], "../assets/js/authentification/signUp.js"),
     new Route("/myAccount", "Mon compte", "../pages/authentification/myAccount.html", ["client", "admin"]),
     new Route("/editPassword", "Modifier mon mot de passe", "../pages/authentification/editPassword.html", ["client", "admin"]),
-    new Route("/manageResa", "Vos Réservations", "../pages/reservations/manageResa.html", ["clients"]),
-    new Route("/newResa", "Nouvelle Réservation", "../pages/reservations/newResa.html", ["clients"]),
+    new Route("/manageResa", "Vos Réservations", "../pages/reservations/manageResa.html", ["client"]),
+    new Route("/newResa", "Nouvelle Réservation", "../pages/reservations/newResa.html", ["client"]),
     new Route("/manageMenu", "Gérer la carte", "../pages/gestionCarte/manageMenu.html", ["admin"]),
 ];
 

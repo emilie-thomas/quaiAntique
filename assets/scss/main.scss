@@ -24,7 +24,32 @@ main{
   font-family: $font-family-serif;
   color: $primary;
   font-size: 2rem;
+  &:hover{
+    color: $light;
+  }
 }
+.nav-link{
+  color: $light;
+  &:hover{
+    color: white;
+    font-weight: bold;
+  }
+}
+.dropdown-menu{
+  background-color: $black;
+  border: none;
+  color: $light;
+}
+.dropdown-menu a:hover{
+    background-color: $primary;
+    color: $black;
+}
+
+header nav .active{
+  background-color: #362164;
+  border-radius: 5%;
+}
+
 
 footer p{
   color: $light;
